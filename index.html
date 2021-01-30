@@ -29,51 +29,60 @@
     <!--Booking Section-->
     <main class="main-content container">
         <div class="booking-form">
+            <p class="warning"></p>
             <h3>Booking Flights</h3>
-            <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
-            </div>
-            <div class="input-group">
-                <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+            <div class="inputs">
+                <div class="input-group">
+                    <label for="">Flying From</label>
+                    <input class="flying-from inp-style w-100" type="text" name="" placeholder="Dhaka, Bangladesh">
+                </div>
+                <div class="input-group">
+                    <label for="">Flying To</label>
+                    <input class="flying-to inp-style w-100" type="text" placeholder="New York, United States">
+                </div>
             </div>
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                    <input class="flying-departure inp-style w-100" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <input class="flying-return inp-style w-100" type="date" name="">
                 </div>
             </div>
+           
             <div class="input-group f-class">
-                <div>
+                <div class="w-100">
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
-                </div>
-                <div class="plus-minus-btn">
-                    <p>+ -</p>
+                    <div class="f-class w-100">
+                        <button class="btn first-class-minus">-</button>
+                        <input class="first-class-ticket-amount inp-style w-100 mxy-10" type="number" name="" min="0" max="100">
+                        <button class="btn first-class-plus">+</button>
+                    </div>
+                    
                 </div>
             </div>
             
             <div class="input-group f-class">
-                <div>
+                <div class="w-100">
                     <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <div class="f-class">
+                        <button class="btn economy-minus">-</button>
+                        <input class="economy-ticket-amount inp-style  w-100 mxy-10" type="number" name="" min="0" max="100">
+                        <button class="btn economy-plus">+</button>
+                    </div>
                 </div>
-                <div class="plus-minus-btn">
-                    <p> <span>+</span> <span>-</span> </p>
-                </div>
+               
             </div>
+            
             <div class="calculations">
                 <div class="amount">
                     <div class="left">
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p>$<span class="subtotal">00</span></p>
                     </div>
                 </div>
 
@@ -82,7 +91,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p>$ <span class="vat">00</span></p>
                     </div>
                 </div>
                 <hr>
@@ -91,11 +100,66 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p>$ <span class="total">0</span></p>
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button class="btn-style book-now">Book Now</button>
+        </div>
+
+        <div class="booking-details">
+            <header>
+                <h3>Flight Booked Successfully</h3>
+                <p>Flight Details</p>
+            </header>
+            
+            <table class="table table-bordered">
+                
+                <tbody>
+
+                  <tr>
+                    <td class="strong">Flying From</td>
+                    <td class="user-flying-from"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="strong">Flying To</td>
+                    <td class="user-flying-to"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="strong">Departure</td>
+                    <td class="user-departure-date"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="strong">Return</td>
+                    <td class="user-return-date"></td>
+                  </tr>
+                  <tr>
+                    <td class="strong">First Class</td>
+                    <td><span class="user-first-class"></span> Tickets</td>
+                  </tr>
+                  <tr>
+                    <td class="strong">Economy</td>
+                    <td><span class="user-economy-class"></span> Tickets</td>
+                  </tr>
+                  <tr class="Subtotal">
+                    <td class="strong">Subtotal</td>
+                    <td> $ <span class="user-subtotal"></span></td>
+                  </tr>
+                  <tr>
+                    <td class="strong">Vat</td>
+                    <td> $ <span class="user-vat"></span></td>
+                  </tr>
+                  <tr>
+                    <td class="strong">Total</td>
+                    <td > $ <span class="user-total"></span></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+               <button class="btn-style book-now"><a href="" style="color: #fff;">Back To Home</a></button>
         </div>
 
         <div class="booking-content">
@@ -103,8 +167,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
     </section>
-
-    <!--Thank You-->
+    <script src="javaScript.js"></script>
 </body>
 
 </html>
